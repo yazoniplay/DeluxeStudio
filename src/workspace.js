@@ -72,8 +72,8 @@ export function getCompatibilityWarnings(config, version) {
   const fields = Object.entries(config.items || {})
   const modern = fields.filter(([, item]) => item.item_model || item.model_data_component || item.tooltip_style || item.hide_tooltip)
   if (modern.length && version && version !== '1.21.4+' && version.startsWith('1.')) {
-    const older = Number(version.split('.').slice(0, 2).join(''))
-    if (older < 121) warnings.push(`${modern.length} item(s) use newer item metadata fields. Verify support for Minecraft ${version} and your DeluxeMenus build.`)
+    const [major, minor, patch] = version.split('.').map(Number)
+    if (major < 1 || minor < 21 || (minor === 21 && patch < 4)) warnings.push(`${modern.length} item(s) use newer item metadata fields. Verify support for Minecraft ${version} and your DeluxeMenus build.`)
   }
   if (fields.some(([, item]) => item.item_model) && version && ['1.20.4','1.20.6','1.21.1'].includes(version)) {
     warnings.push('The item_model field targets newer Minecraft versions. Check the plugin documentation before deployment.')
