@@ -49,6 +49,10 @@ export function compileToYAML(config) {
             if (Array.isArray(value) && value.length === 0) continue
             clean[field] = value
           }
+          if (Array.isArray(clean.slots) && clean.slots.length) {
+            clean.slots = [...new Set([Number(item.slot), ...clean.slots.map(Number)].filter(Number.isInteger))]
+            delete clean.slot
+          }
           return [key, clean]
         }),
     )
@@ -75,9 +79,10 @@ export function parseYAML(source) {
   const items = {}
   for (const [key, value] of Object.entries(parsed.items)) {
     if (!value || typeof value !== 'object') continue
-    const slot = Number(value.slot)
-    if (!Number.isInteger(slot) || slot < 0 || slot >= Number(parsed.size || 54)) continue
-    const item = { ...value, slot, material: value.material || 'STONE' }
+    const validSlots = Array.isArray(value.slots) ? value.slots.map(Number).filter(slot => Number.isInteger(slot) && slot >= 0 && slot < Number(parsed.size || 54)) : []
+    const rawSlot = value.slot == null ? validSlots[0] : Number(value.slot)
+    if (!Number.isInteger(rawSlot) || rawSlot < 0 || rawSlot >= Number(parsed.size || 54)) continue
+    const item = { ...value, slot: rawSlot, ...(validSlots.length ? { slots: validSlots } : {}), material: value.material || 'STONE' }
     if (item.model_data == null && item.custom_model_data != null) item.model_data = item.custom_model_data
     delete item.custom_model_data
     items[key] = item
@@ -98,14 +103,16 @@ export function validateConfig(config) {
   if (![9, 18, 27, 36, 45, 54].includes(Number(config.size))) errors.push('Menu size must be 9, 18, 27, 36, 45 or 54.')
   const occupied = new Map()
   for (const [key, item] of Object.entries(config.items || {})) {
-    const slot = Number(item.slot)
+    const slots = [...new Set([Number(item.slot), ...(Array.isArray(item.slots) ? item.slots.map(Number) : [])])]
     if (!item.material) errors.push(`${key}: material is missing.`)
-    if (!Number.isInteger(slot) || slot < 0 || slot >= Number(config.size)) {
-      errors.push(`${key}: slot must be between 0 and ${Number(config.size) - 1}.`)
+    if (!slots.length || slots.some(slot => !Number.isInteger(slot) || slot < 0 || slot >= Number(config.size))) {
+      errors.push(`${key}: slot values must be between 0 and ${Number(config.size) - 1}.`)
     }
-    if (occupied.has(slot)) warnings.push(`Slot ${slot} is shared by "${occupied.get(slot)}" and "${key}". Check priorities if this is intentional.`)
-    else occupied.set(slot, key)
-    if (item.slot == null) errors.push(`${key}: slot is required.`)
+    for (const slot of slots) {
+      if (occupied.has(slot)) warnings.push(`Slot ${slot} is shared by "${occupied.get(slot)}" and "${key}". Check priorities if this is intentional.`)
+      else occupied.set(slot, key)
+    }
+    if (item.slot == null && !(item.slots || []).length) errors.push(`${key}: slot or slots is required.`)
     for (const actionField of ['click_commands','left_click_commands','right_click_commands','shift_left_click_commands','shift_right_click_commands','middle_click_commands']) {
       for (const [index, action] of (item[actionField] || []).entries()) {
         if (typeof action === 'string' && action.trim() && !/^\[[a-z_]+\]/i.test(action.trim())) {
