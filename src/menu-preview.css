@@ -28,8 +28,8 @@
 .preview-fade{animation:preview-fade-in var(--preview-duration,420ms) var(--preview-ease,ease-out) both}
 .preview-chest{animation:preview-chest-in var(--preview-duration,420ms) var(--preview-ease,ease-out) both;transform-origin:50% 30%}
 .preview-pop .menu-preview-window{animation:preview-fade-in var(--preview-duration,420ms) var(--preview-ease,ease-out) both}
-.preview-pop .menu-preview-slot.has-preview-item{animation:preview-slot-pop 300ms var(--preview-ease,ease-out) both;animation-delay:calc(var(--slot-index,0) * 13ms)}
-.preview-chest .menu-preview-slot.has-preview-item{animation:preview-slot-pop 260ms var(--preview-ease,ease-out) both;animation-delay:calc(var(--slot-index,0) * 7ms)}
+.preview-pop .menu-preview-slot.has-preview-item{animation:preview-slot-pop 300ms var(--preview-ease,ease-out) both}.preview-pop.stagger-enabled .menu-preview-slot.has-preview-item{animation-delay:calc(var(--slot-index,0) * 13ms)}
+.preview-chest .menu-preview-slot.has-preview-item{animation:preview-slot-pop 260ms var(--preview-ease,ease-out) both}.preview-chest.stagger-enabled .menu-preview-slot.has-preview-item{animation-delay:calc(var(--slot-index,0) * 7ms)}
 .menu-preview-backdrop.is-closing{animation-direction:reverse}
 .menu-preview-backdrop.is-closing .menu-preview-dialog,.menu-preview-backdrop.is-closing .menu-preview-window{animation-direction:reverse}
 @keyframes preview-backdrop-in{from{opacity:0}to{opacity:1}}
