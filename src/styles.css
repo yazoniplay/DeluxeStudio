@@ -191,3 +191,5 @@ body:before{content:none;display:none}
 .compatibility-card b{font-size:9px;color:#bfe8f7}.compatibility-card p{font-size:8px;line-height:1.8;color:#b1c1cf;margin:7px 0 0}
 @media(max-width:1050px){.workspace-grid{grid-template-columns:minmax(0,1.15fr) minmax(270px,.85fr)}.blocks-panel.palette-open{grid-column:1/-1;grid-row:2}}
 @media(max-width:760px){.workspace-grid{grid-template-columns:1fr}.canvas-panel{grid-column:1;grid-row:1}.inspector-panel{grid-column:1;grid-row:2}.blocks-panel.palette-open{grid-column:1;grid-row:3}.canvas-actions .btn{font-size:8px;padding:0 7px}.studio-tools-backdrop{padding:8px}.studio-tools{max-height:94vh}.studio-tools-header{padding:15px}.studio-tools-content{padding:14px}.studio-tools-nav{padding:8px}.studio-tools-nav button{padding:8px}.template-grid{grid-template-columns:1fr}.simulator-vars{grid-template-columns:1fr}.tool-toolbar{align-items:flex-start;flex-direction:column}}
+
+.palette-heading-actions{display:flex;align-items:center;gap:8px}.palette-heading-actions .icon-btn{width:28px;height:28px;flex-shrink:0}
