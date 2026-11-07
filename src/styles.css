@@ -193,3 +193,73 @@ body:before{content:none;display:none}
 @media(max-width:760px){.workspace-grid{grid-template-columns:1fr}.canvas-panel{grid-column:1;grid-row:1}.inspector-panel{grid-column:1;grid-row:2}.blocks-panel.palette-open{grid-column:1;grid-row:3}.canvas-actions .btn{font-size:8px;padding:0 7px}.studio-tools-backdrop{padding:8px}.studio-tools{max-height:94vh}.studio-tools-header{padding:15px}.studio-tools-content{padding:14px}.studio-tools-nav{padding:8px}.studio-tools-nav button{padding:8px}.template-grid{grid-template-columns:1fr}.simulator-vars{grid-template-columns:1fr}.tool-toolbar{align-items:flex-start;flex-direction:column}}
 
 .palette-heading-actions{display:flex;align-items:center;gap:8px}.palette-heading-actions .icon-btn{width:28px;height:28px;flex-shrink:0}
+
+
+/* Three-zone desktop editor: inventory + palette above, properties below. */
+.workspace-grid{grid-template-columns:minmax(0,1.18fr) minmax(310px,.82fr);gap:14px;align-items:stretch}
+.canvas-panel{grid-column:1;grid-row:1;min-width:0}
+.blocks-panel.palette-open{grid-column:2;grid-row:1;display:flex;flex-direction:column;min-width:0;min-height:100%;max-height:690px;overflow:hidden}
+.blocks-panel.palette-open .blocks-browser{display:flex;flex:1;flex-direction:column;min-height:0;overflow:hidden;padding:12px}
+.blocks-panel.palette-open .blocks-list{grid-template-columns:1fr;flex:1;min-height:170px;max-height:none;overflow:auto;overscroll-behavior:contain}
+.blocks-panel.palette-open .material-list button{min-height:43px}
+.blocks-panel.palette-open .palette-hint{margin-top:auto;padding-top:10px}
+.blocks-panel.palette-closed{display:none}
+.inspector-panel{grid-column:1/-1;grid-row:2;width:100%}
+.inspector-panel .form-content{max-height:none;overflow:visible;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:14px 18px}
+.inspector-panel .selected-item-card,.inspector-panel .advanced,.inspector-panel .notice,.inspector-panel .empty-inspector{grid-column:1/-1}
+.inspector-panel .selected-item-card{margin-bottom:2px}
+.inspector-panel .form-content>.field:has(textarea){grid-column:span 1}
+.inspector-panel .form-content .advanced{width:100%}
+.inventory-wrap{min-height:100%}
+.inventory-slot.has-item{animation:item-pop-in .24s cubic-bezier(.2,.8,.2,1) both}
+.inventory-slot:active{transform:scale(.94)}
+.inventory-slot{transition:transform .16s cubic-bezier(.2,.8,.2,1),filter .18s,box-shadow .18s}
+.material-list button{transition:transform .16s ease,border-color .18s,background .18s,box-shadow .18s}
+.material-list button:hover{transform:translateY(-2px);box-shadow:0 5px 15px #0004}
+.btn,.icon-btn,.inspector-tabs button,.palette-mode-tabs button{transition:transform .16s ease,background .18s,border-color .18s,color .18s,box-shadow .18s}
+.btn:active,.icon-btn:active{transform:scale(.96)}
+.panel{animation:panel-enter .32s cubic-bezier(.2,.75,.25,1) both}
+.inspector-panel{animation-delay:.05s}
+.blocks-panel{animation-delay:.08s}
+@keyframes item-pop-in{0%{transform:scale(.72);filter:brightness(1.6)}75%{transform:scale(1.06)}100%{transform:scale(1);filter:brightness(1)}}
+@keyframes panel-enter{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes tutorial-pulse{0%,100%{box-shadow:0 0 0 3px #6dc9ec,0 0 0 8px #6dc9ec28,0 10px 30px #0008}50%{box-shadow:0 0 0 4px #a7e6fa,0 0 0 12px #6dc9ec36,0 10px 36px #0009}}
+/* Interactive guide: it never blocks the editor, so the highlighted controls remain clickable. */
+.guided-tutorial{position:fixed;right:22px;bottom:22px;z-index:140;width:min(390px,calc(100vw - 28px));padding:17px 18px 14px;background:#182432;border:1px solid #4b6a83;border-radius:12px;box-shadow:0 18px 60px #000a;color:#edf5fa;animation:guide-enter .34s cubic-bezier(.2,.8,.2,1) both}
+@keyframes guide-enter{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.guided-tutorial-top{display:flex;align-items:center;justify-content:space-between;color:#83d5f4;font:8px var(--mono);letter-spacing:1px}
+.guided-tutorial-top>span{display:flex;align-items:center;gap:7px}
+.tutorial-close{width:27px;height:27px;border:1px solid #40566c;border-radius:6px;background:#223448;color:#d7e6ef;display:grid;place-items:center}
+.guided-progress{display:flex;gap:5px;margin:13px 0 14px}
+.guided-progress i{height:3px;flex:1;border-radius:9px;background:#34495b}
+.guided-progress i.done{background:#70c8e9}
+.guided-tutorial .tutorial-eyebrow{font:8px var(--mono);color:#83d5f4;letter-spacing:.7px;margin:4px 0 8px}
+.guided-tutorial h2{font-size:16px;letter-spacing:-.3px;margin:0 0 8px}
+.guided-tutorial .tutorial-copy{font-size:10px;line-height:1.7;color:#b6c7d4;margin:0 0 13px}
+.guide-step-count{display:block;font:8px var(--mono);color:#8acde7;margin:0 0 8px}
+.guided-tutorial-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #33495e;padding-top:11px;margin-top:13px}
+.guided-tutorial-footer>div{display:flex;align-items:center;gap:8px}
+.guided-tutorial .tutorial-skip{border:0;background:transparent;color:#8fa9bc;font-size:9px;padding:5px 0}
+.guided-tutorial .tutorial-skip:hover{color:#d8f3ff}
+.guided-tutorial .guide-main-action{height:35px;margin-top:3px}
+.guide-waiting{font:8px var(--mono);color:#8ed6ee;white-space:nowrap}
+.guided-tutorial .btn:disabled{opacity:.35;cursor:not-allowed}
+.app-shell.tutorial-step-1 [data-tutorial-target="add-item"],
+.app-shell.tutorial-step-2 [data-tutorial-target="material-list"] button:first-child,
+.app-shell.tutorial-step-3 .inventory-slot.is-selected,
+.app-shell.tutorial-step-4 [data-tutorial-target="properties"],
+.app-shell.tutorial-step-5 [data-tutorial-target="export"]{position:relative;z-index:130;animation:tutorial-pulse 1.5s ease-in-out infinite!important;outline:2px solid #9be6ff;outline-offset:4px}
+.app-shell.tutorial-step-2 [data-tutorial-target="material-list"] button:first-child{border-color:#8fe0fa}
+.app-shell.tutorial-step-4 [data-tutorial-target="properties"]{border-color:#83d4f0}
+@media(max-width:1050px){.workspace-grid{grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr)}.inspector-panel .form-content{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+ .workspace-grid{grid-template-columns:1fr;gap:10px}
+ .canvas-panel,.blocks-panel.palette-open,.inspector-panel{grid-column:1;grid-row:auto;display:block!important}
+ .blocks-panel.palette-open{max-height:520px;min-height:390px}
+ .blocks-panel.palette-open .blocks-list{max-height:260px;min-height:180px}
+ .inspector-panel .form-content{grid-template-columns:1fr;max-height:none}
+ .inspector-panel .form-content>.field:has(textarea){grid-column:1}
+ .mobile-tabs{display:none}
+ .guided-tutorial{right:10px;bottom:10px;width:min(390px,calc(100vw - 20px))}
+}
+@media(prefers-reduced-motion:reduce){.panel,.guided-tutorial,.inventory-slot.has-item{animation:none!important}.inventory-slot,.material-list button,.btn,.icon-btn{transition:none!important}}
