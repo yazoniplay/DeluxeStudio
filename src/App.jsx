@@ -20,7 +20,7 @@ export default function App(){
  const notify=msg=>{setToast(msg);window.clearTimeout(notify.timer);notify.timer=window.setTimeout(()=>setToast(''),2200)}
  const updateConfig=patch=>setConfig(p=>({...p,...patch}))
  const updateItem=patch=>{if(!selectedKey)return;setConfig(p=>({...p,items:{...p.items,[selectedKey]:{...p.items[selectedKey],...patch}}}))}
- const addItem=(material,slot=selected?.slot??pendingSlot)=>{const key=keyFor(material,slot,config.items);setConfig(p=>({...p,items:{...p.items,[key]:createItem(material,slot)}}));setSelectedKey(key);setShowPalette(false);setMaterialSearch('');setTab('items')}
+ const addItem=(material,slot=selected?.slot??pendingSlot)=>{const targetSlot=Math.max(0,Math.min(config.size-1,Number(slot)||0));const key=keyFor(material,targetSlot,config.items);setConfig(p=>({...p,items:{...p.items,[key]:createItem(material,targetSlot)}}));setSelectedKey(key);setPendingSlot(targetSlot);setShowPalette(false);setMaterialSearch('');setTab('items')}
  const removeItem=()=>{if(!selectedKey)return;const next={...config.items};delete next[selectedKey];setConfig(p=>({...p,items:next}));setSelectedKey(Object.keys(next)[0]||null)}
  const duplicateItem=()=>{if(!selected)return;const key=keyFor(selected.material,selected.slot,config.items);setConfig(p=>({...p,items:{...p.items,[key]:{...selected}}}));setSelectedKey(key);notify('Item duplicated')}
  const moveItem=(from,slot)=>{if(!from||!config.items[from])return;setConfig(p=>({...p,items:{...p.items,[from]:{...p.items[from],slot}}}))}
