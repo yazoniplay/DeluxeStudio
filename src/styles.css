@@ -23,8 +23,8 @@
 /* Minecraft-inspired pixel interface */
 :root{font-family:'Silkscreen',monospace;color:#e8edf4;background:#0c121c;--bg:#0c121c;--panel:rgba(18,27,40,.94);--line:#35465a;--muted:#9aabba;--text:#edf4fa;--accent:#5bb8df;--mono:'Silkscreen',monospace}
 *{font-family:'Silkscreen',monospace!important;letter-spacing:0!important}
-body{background-color:#0b111b;background-image:linear-gradient(180deg,rgba(7,12,20,.60),rgba(7,12,20,.86)),linear-gradient(180deg,#587b97 0%,#9ab2bc 38%,#526b57 38.2%,#344638 58%,#27333a 58.2%,#111923 100%);background-attachment:fixed;image-rendering:pixelated}
-body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.28;background-image:repeating-linear-gradient(90deg,transparent 0 62px,rgba(5,9,15,.52) 62px 64px),repeating-linear-gradient(0deg,transparent 0 62px,rgba(5,9,15,.42) 62px 64px),linear-gradient(135deg,transparent 0 38%,rgba(18,33,43,.7) 38% 55%,transparent 55%),linear-gradient(45deg,transparent 0 53%,rgba(19,35,43,.55) 53% 70%,transparent 70%);background-size:64px 64px,64px 64px,100% 100%,100% 100%}
+body{background-color:#0b111b;background-image:linear-gradient(180deg,rgba(7,12,20,.72),rgba(7,12,20,.84)),url("https://whatifgaming.com/wp-content/uploads/2024/02/Minecraft-Plains-Seeds-3-1024x534.png");background-position:center,center 46%;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;image-rendering:pixelated}
+body:before{content:none;display:none}
 .app-shell{position:relative;z-index:1}
 .topbar{background:rgba(12,18,28,.92);border-color:#3b4d61}
 .page-heading h1{font-size:18px;line-height:1.8;text-shadow:2px 2px #101722}
