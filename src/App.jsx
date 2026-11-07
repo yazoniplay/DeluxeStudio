@@ -5,6 +5,7 @@ import yamlLib from 'js-yaml'
 import minecraftItems from './data/minecraft-items-26.4-snapshot-7.json'
 import StudioTools from './StudioTools'
 import { createTemplateConfig } from './workspace'
+import './menu-preview.css'
 
 const ITEM_BY_NAME = Object.fromEntries(minecraftItems.map(item=>[item.name,item]))
 const MATERIAL_CATEGORIES = ['All',...new Set(minecraftItems.map(item=>item.category))]
