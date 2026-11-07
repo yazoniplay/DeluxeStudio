@@ -29,9 +29,9 @@ export function createItem(material = 'DIAMOND', slot = 13) {
 export function compileToYAML(config) {
   const output = {
     menu_title: config.menu_title || '&8Untitled Menu',
-    open_command: config.open_command || 'menu',
-    size: Number(config.size) || 27,
+    ...(Array.isArray(config.open_command) ? { open_command: config.open_command } : config.open_command ? { open_command: config.open_command } : { open_command: [] }),
   }
+  if (!config.inventory_type || config.inventory_type === 'CHEST') output.size = Number(config.size) || 27
   if (config.inventory_type && config.inventory_type !== 'CHEST') output.inventory_type = config.inventory_type
   if (config.register_command != null) output.register_command = Boolean(config.register_command)
   if (config.open_commands?.length) output.open_commands = config.open_commands
