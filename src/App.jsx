@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Activity, AlertCircle, ArrowDownToLine, Blocks, BookOpen, Check, ChevronDown, Clipboard, Code2, Copy, Download, FileCode2, FilePlus2, FolderOpen, Grid3X3, Layers3, MoreHorizontal, Package, Plus, Search, Settings2, ShieldCheck, Sparkles, Trash2, RotateCcw, Upload, X, Zap } from 'lucide-react'
 import { compileToYAML, createDefaultConfig, createItem, parseYAML, validateConfig } from './lib/yaml'
 import yamlLib from 'js-yaml'
-import minecraftItems from './data/minecraft-items-1.21.4.json'
+import minecraftItems from './data/minecraft-items-26.4-snapshot-7.json'
 
 const ITEM_BY_NAME = Object.fromEntries(minecraftItems.map(item=>[item.name,item]))
 const MATERIAL_CATEGORIES = ['All',...new Set(minecraftItems.map(item=>item.category))]
