@@ -7,6 +7,10 @@ export function createDefaultConfig() {
     menu_title: '&8Server Menu',
     open_command: 'menu',
     size: 27,
+    inventory_type: 'CHEST',
+    register_command: true,
+    open_commands: [],
+    close_commands: [],
     update_interval: 0,
     items: {},
   }
@@ -28,6 +32,10 @@ export function compileToYAML(config) {
     open_command: config.open_command || 'menu',
     size: Number(config.size) || 27,
   }
+  if (config.inventory_type && config.inventory_type !== 'CHEST') output.inventory_type = config.inventory_type
+  if (config.register_command != null) output.register_command = Boolean(config.register_command)
+  if (config.open_commands?.length) output.open_commands = config.open_commands
+  if (config.close_commands?.length) output.close_commands = config.close_commands
   if (config.update_interval) output.update_interval = Number(config.update_interval)
   if (config.open_requirement) output.open_requirement = config.open_requirement
   if (config.items && Object.keys(config.items).length) {
