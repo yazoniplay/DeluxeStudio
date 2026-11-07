@@ -27,17 +27,19 @@ export function createItem(material = 'DIAMOND', slot = 13) {
 }
 
 export function compileToYAML(config) {
-  const output = {
-    menu_title: config.menu_title || '&8Untitled Menu',
-    ...(Array.isArray(config.open_command) ? { open_command: config.open_command } : config.open_command ? { open_command: config.open_command } : { open_command: [] }),
+  const output = { ...config }
+  output.menu_title = config.menu_title || '&8Untitled Menu'
+  if (Array.isArray(config.open_command)) output.open_command = config.open_command
+  else output.open_command = config.open_command ? config.open_command : []
+  if (config.inventory_type && config.inventory_type !== 'CHEST') {
+    output.inventory_type = config.inventory_type
+    delete output.size
+  } else {
+    output.inventory_type = config.inventory_type || 'CHEST'
+    output.size = Number(config.size) || 27
   }
-  if (!config.inventory_type || config.inventory_type === 'CHEST') output.size = Number(config.size) || 27
-  if (config.inventory_type && config.inventory_type !== 'CHEST') output.inventory_type = config.inventory_type
   if (config.register_command != null) output.register_command = Boolean(config.register_command)
-  if (config.open_commands?.length) output.open_commands = config.open_commands
-  if (config.close_commands?.length) output.close_commands = config.close_commands
-  if (config.update_interval) output.update_interval = Number(config.update_interval)
-  if (config.open_requirement) output.open_requirement = config.open_requirement
+  if (config.update_interval != null) output.update_interval = Number(config.update_interval)
   if (config.items && Object.keys(config.items).length) {
     output.items = Object.fromEntries(
       Object.entries(config.items)
