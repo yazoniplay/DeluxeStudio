@@ -1,4 +1,4 @@
-import { createDefaultConfig } from './lib/yaml'
+import { createDefaultConfig } from './lib/yaml.js'
 
 const makeItem = (material, slot, name, lore, commands = []) => ({
   material, slot, display_name: name, lore,
@@ -44,13 +44,22 @@ export function createTemplateConfig(template) {
   return { ...config, menu_title: selected.menu_title, items: selected.items }
 }
 
+const OPEN_MENU_FIELDS = [
+  'click_commands',
+  'left_click_commands',
+  'right_click_commands',
+  'shift_left_click_commands',
+  'shift_right_click_commands',
+  'middle_click_commands',
+]
+
 export function analyzeProject(config, knownMenus = []) {
   const base = []
-  const refs = new Set(knownMenus.map(name => String(name).replace(/\\.ya?ml$/i, '').toLowerCase()))
+  const refs = new Set(knownMenus.map(name => String(name).replace(/\.ya?ml$/i, '').toLowerCase()))
   for (const [key, item] of Object.entries(config.items || {})) {
-    for (const field of ['click_commands','left_click_commands','right_click_commands','shift_left_click_commands','shift_right_click_commands']) {
+    for (const field of OPEN_MENU_FIELDS) {
       for (const command of item[field] || []) {
-        const match = String(command).match(/^\\[openguimenu\\]\\s+([\\w.-]+)/i)
+        const match = String(command).match(/^\[openguimenu\]\s+([\w.-]+)/i)
         if (match && refs.size && !refs.has(match[1].toLowerCase())) {
           base.push({ severity: 'warning', title: 'Menu reference not found', detail: `${key} opens "${match[1]}", but that menu is not in this project.` })
         }
@@ -67,15 +76,29 @@ export function renderPreviewValue(value, variables) {
   return String(value ?? '').replace(/%([a-zA-Z0-9_:.]+)%/g, (token, key) => variables[token] ?? token)
 }
 
+// "1.21.4" -> [1, 21, 4]; "26.4 snapshot" -> [26, 4, 0]; anything else -> null.
+export function parseVersion(version) {
+  const match = /^(\d+)\.(\d+)(?:\.(\d+))?/.exec(String(version ?? '').trim())
+  return match ? [Number(match[1]), Number(match[2]), Number(match[3] ?? 0)] : null
+}
+
+function isBefore(version, target) {
+  for (let i = 0; i < 3; i += 1) {
+    if (version[i] !== target[i]) return version[i] < target[i]
+  }
+  return false
+}
+
 export function getCompatibilityWarnings(config, version) {
   const warnings = []
+  const parsed = parseVersion(version)
+  if (!parsed) return warnings
   const fields = Object.entries(config.items || {})
   const modern = fields.filter(([, item]) => item.item_model || item.model_data_component || item.tooltip_style || item.hide_tooltip)
-  if (modern.length && version && version !== '1.21.4+' && version.startsWith('1.')) {
-    const [major, minor, patch] = version.split('.').map(Number)
-    if (major < 1 || minor < 21 || (minor === 21 && patch < 4)) warnings.push(`${modern.length} item(s) use newer item metadata fields. Verify support for Minecraft ${version} and your DeluxeMenus build.`)
+  if (modern.length && isBefore(parsed, [1, 21, 4])) {
+    warnings.push(`${modern.length} item(s) use newer item metadata fields. Verify support for Minecraft ${version} and your DeluxeMenus build.`)
   }
-  if (fields.some(([, item]) => item.item_model) && version && ['1.20.4','1.20.6','1.21.1'].includes(version)) {
+  if (fields.some(([, item]) => item.item_model) && ['1.20.4', '1.20.6', '1.21.1'].includes(String(version).trim())) {
     warnings.push('The item_model field targets newer Minecraft versions. Check the plugin documentation before deployment.')
   }
   return warnings

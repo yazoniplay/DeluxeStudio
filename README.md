@@ -37,6 +37,12 @@ Create a production build with:
 npm run build
 ```
 
+Run the test suite (Node 20+, no extra dependencies) with:
+
+```bash
+npm test
+```
+
 ## Important notes
 
 - The inventory canvas is a browser preview, not a live Minecraft client or server inventory.
