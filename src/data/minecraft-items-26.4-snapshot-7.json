@@ -1490,7 +1490,7 @@
     "displayName": "Stripped Pale Oak Wood",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/pale_oak_log.png",
     "isBlock": true
   },
   {
@@ -1589,7 +1589,7 @@
     "displayName": "Pale Oak Wood",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/pale_oak_log.png",
     "isBlock": true
   },
   {
@@ -2435,7 +2435,7 @@
     "displayName": "Pale Oak Slab",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/pale_oak_planks.png",
     "isBlock": true
   },
   {
@@ -2696,7 +2696,7 @@
     "displayName": "Chiseled Bookshelf",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "blocks/bookshelf.png",
     "isBlock": true
   },
   {
@@ -2921,7 +2921,7 @@
     "displayName": "Oak Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/oak_planks.png",
     "isBlock": true
   },
   {
@@ -2930,7 +2930,7 @@
     "displayName": "Spruce Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/spruce_planks.png",
     "isBlock": true
   },
   {
@@ -2939,7 +2939,7 @@
     "displayName": "Birch Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/birch_planks.png",
     "isBlock": true
   },
   {
@@ -2948,7 +2948,7 @@
     "displayName": "Jungle Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/jungle_planks.png",
     "isBlock": true
   },
   {
@@ -2957,7 +2957,7 @@
     "displayName": "Acacia Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/acacia_planks.png",
     "isBlock": true
   },
   {
@@ -2966,7 +2966,7 @@
     "displayName": "Cherry Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/cherry_planks.png",
     "isBlock": true
   },
   {
@@ -2975,7 +2975,7 @@
     "displayName": "Dark Oak Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/dark_oak_planks.png",
     "isBlock": true
   },
   {
@@ -2984,7 +2984,7 @@
     "displayName": "Pale Oak Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/pale_oak_planks.png",
     "isBlock": true
   },
   {
@@ -2993,7 +2993,7 @@
     "displayName": "Mangrove Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/mangrove_planks.png",
     "isBlock": true
   },
   {
@@ -3011,7 +3011,7 @@
     "displayName": "Crimson Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/crimson_planks.png",
     "isBlock": true
   },
   {
@@ -3020,7 +3020,7 @@
     "displayName": "Warped Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/warped_planks.png",
     "isBlock": true
   },
   {
@@ -3362,7 +3362,7 @@
     "displayName": "Vines",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "blocks/vine.png",
     "isBlock": true
   },
   {
@@ -3407,7 +3407,7 @@
     "displayName": "Resin Brick Stairs",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/bricks.png",
     "isBlock": true
   },
   {
@@ -3416,7 +3416,7 @@
     "displayName": "Resin Brick Slab",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/bricks.png",
     "isBlock": true
   },
   {
@@ -3425,7 +3425,7 @@
     "displayName": "Resin Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/bricks.png",
     "isBlock": true
   },
   {
@@ -3515,7 +3515,7 @@
     "displayName": "Nether Brick Fence",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/nether_bricks.png",
     "isBlock": true
   },
   {
@@ -3704,7 +3704,7 @@
     "displayName": "Pale Oak Stairs",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/pale_oak_planks.png",
     "isBlock": true
   },
   {
@@ -3776,7 +3776,7 @@
     "displayName": "Cobblestone Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/cobblestone.png",
     "isBlock": true
   },
   {
@@ -3785,7 +3785,7 @@
     "displayName": "Mossy Cobblestone Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/mossy_cobblestone.png",
     "isBlock": true
   },
   {
@@ -3794,7 +3794,7 @@
     "displayName": "Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/bricks.png",
     "isBlock": true
   },
   {
@@ -3803,7 +3803,7 @@
     "displayName": "Prismarine Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/prismarine.png",
     "isBlock": true
   },
   {
@@ -3812,7 +3812,7 @@
     "displayName": "Red Sandstone Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/red_sandstone.png",
     "isBlock": true
   },
   {
@@ -3821,7 +3821,7 @@
     "displayName": "Mossy Stone Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/mossy_stone_bricks.png",
     "isBlock": true
   },
   {
@@ -3830,7 +3830,7 @@
     "displayName": "Granite Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/granite.png",
     "isBlock": true
   },
   {
@@ -3839,7 +3839,7 @@
     "displayName": "Stone Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/stone_bricks.png",
     "isBlock": true
   },
   {
@@ -3848,7 +3848,7 @@
     "displayName": "Mud Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/mud_bricks.png",
     "isBlock": true
   },
   {
@@ -3857,7 +3857,7 @@
     "displayName": "Nether Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/nether_bricks.png",
     "isBlock": true
   },
   {
@@ -3866,7 +3866,7 @@
     "displayName": "Andesite Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/andesite.png",
     "isBlock": true
   },
   {
@@ -3875,7 +3875,7 @@
     "displayName": "Red Nether Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/red_nether_bricks.png",
     "isBlock": true
   },
   {
@@ -3884,7 +3884,7 @@
     "displayName": "Sandstone Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/sandstone.png",
     "isBlock": true
   },
   {
@@ -3893,7 +3893,7 @@
     "displayName": "End Stone Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/end_stone_bricks.png",
     "isBlock": true
   },
   {
@@ -3902,7 +3902,7 @@
     "displayName": "Diorite Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/diorite.png",
     "isBlock": true
   },
   {
@@ -3911,7 +3911,7 @@
     "displayName": "Blackstone Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/blackstone.png",
     "isBlock": true
   },
   {
@@ -3920,7 +3920,7 @@
     "displayName": "Polished Blackstone Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/polished_blackstone.png",
     "isBlock": true
   },
   {
@@ -3929,7 +3929,7 @@
     "displayName": "Polished Blackstone Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/polished_blackstone_bricks.png",
     "isBlock": true
   },
   {
@@ -3938,7 +3938,7 @@
     "displayName": "Cobbled Deepslate Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/cobbled_deepslate.png",
     "isBlock": true
   },
   {
@@ -3947,7 +3947,7 @@
     "displayName": "Polished Deepslate Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/polished_deepslate.png",
     "isBlock": true
   },
   {
@@ -3956,7 +3956,7 @@
     "displayName": "Deepslate Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/deepslate_bricks.png",
     "isBlock": true
   },
   {
@@ -3965,7 +3965,7 @@
     "displayName": "Deepslate Tile Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/deepslate_tiles.png",
     "isBlock": true
   },
   {
@@ -4586,7 +4586,7 @@
     "displayName": "White Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/white_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4595,7 +4595,7 @@
     "displayName": "Orange Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/orange_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4604,7 +4604,7 @@
     "displayName": "Magenta Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/magenta_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4613,7 +4613,7 @@
     "displayName": "Light Blue Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/light_blue_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4622,7 +4622,7 @@
     "displayName": "Yellow Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/yellow_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4631,7 +4631,7 @@
     "displayName": "Lime Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/lime_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4640,7 +4640,7 @@
     "displayName": "Pink Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/pink_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4649,7 +4649,7 @@
     "displayName": "Gray Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/gray_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4658,7 +4658,7 @@
     "displayName": "Light Gray Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/light_gray_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4667,7 +4667,7 @@
     "displayName": "Cyan Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/cyan_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4676,7 +4676,7 @@
     "displayName": "Purple Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/purple_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4685,7 +4685,7 @@
     "displayName": "Blue Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/blue_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4694,7 +4694,7 @@
     "displayName": "Brown Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/brown_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4703,7 +4703,7 @@
     "displayName": "Green Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/green_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4712,7 +4712,7 @@
     "displayName": "Red Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/red_stained_glass.png",
     "isBlock": true
   },
   {
@@ -4721,7 +4721,7 @@
     "displayName": "Black Stained Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/black_stained_glass.png",
     "isBlock": true
   },
   {
@@ -6422,7 +6422,7 @@
     "displayName": "Pale Oak Button",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/pale_oak_planks.png",
     "isBlock": true
   },
   {
@@ -6566,7 +6566,7 @@
     "displayName": "Pale Oak Pressure Plate",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/pale_oak_planks.png",
     "isBlock": true
   },
   {
@@ -7052,7 +7052,7 @@
     "displayName": "Pale Oak Fence Gate",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/pale_oak_planks.png",
     "isBlock": true
   },
   {
@@ -8168,7 +8168,7 @@
     "displayName": "Enchanted Golden Apple",
     "stackSize": 64,
     "category": "Food",
-    "texturePath": null,
+    "texturePath": "blocks/golden_apple.png",
     "isBlock": false
   },
   {
@@ -10859,7 +10859,7 @@
     "displayName": "Debug Stick",
     "stackSize": 1,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "blocks/stick.png",
     "isBlock": false
   },
   {
@@ -11183,7 +11183,7 @@
     "displayName": "Composter",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "blocks/oak_planks.png",
     "isBlock": true
   },
   {
@@ -12524,7 +12524,7 @@
     "displayName": "Music Disc (Flurry)",
     "stackSize": 64,
     "category": "Decoration",
-    "texturePath": null,
+    "texturePath": "blocks/music_disc_13.png",
     "isBlock": false
   }
 ]
