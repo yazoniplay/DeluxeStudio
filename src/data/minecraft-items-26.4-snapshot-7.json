@@ -131,7 +131,7 @@
     "displayName": "Tuff Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/tuff.png",
     "isBlock": true
   },
   {
@@ -212,7 +212,7 @@
     "displayName": "Tuff Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/tuff_bricks.png",
     "isBlock": true
   },
   {
@@ -3344,7 +3344,7 @@
     "displayName": "Glass Pane",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/glass.png",
     "isBlock": true
   },
   {
@@ -8573,7 +8573,7 @@
     "displayName": "Compass",
     "stackSize": 64,
     "category": "Tools & Utility",
-    "texturePath": null,
+    "texturePath": "items/compass_18.png",
     "isBlock": false
   },
   {
@@ -8582,7 +8582,7 @@
     "displayName": "Recovery Compass",
     "stackSize": 64,
     "category": "Tools & Utility",
-    "texturePath": null,
+    "texturePath": "items/compass_18.png",
     "isBlock": false
   },
   {
@@ -8753,7 +8753,7 @@
     "displayName": "Clock",
     "stackSize": 64,
     "category": "Tools & Utility",
-    "texturePath": null,
+    "texturePath": "items/clock_18.png",
     "isBlock": false
   },
   {
@@ -9437,7 +9437,7 @@
     "displayName": "Armadillo Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9446,7 +9446,7 @@
     "displayName": "Allay Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9455,7 +9455,7 @@
     "displayName": "Axolotl Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9464,7 +9464,7 @@
     "displayName": "Bat Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9473,7 +9473,7 @@
     "displayName": "Bee Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9482,7 +9482,7 @@
     "displayName": "Blaze Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9491,7 +9491,7 @@
     "displayName": "Bogged Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9500,7 +9500,7 @@
     "displayName": "Breeze Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9509,7 +9509,7 @@
     "displayName": "Cat Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9518,7 +9518,7 @@
     "displayName": "Camel Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9527,7 +9527,7 @@
     "displayName": "Cave Spider Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9536,7 +9536,7 @@
     "displayName": "Chicken Spawn Egg",
     "stackSize": 64,
     "category": "Food",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9545,7 +9545,7 @@
     "displayName": "Cod Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9554,7 +9554,7 @@
     "displayName": "Cow Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9563,7 +9563,7 @@
     "displayName": "Creeper Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9572,7 +9572,7 @@
     "displayName": "Dolphin Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9581,7 +9581,7 @@
     "displayName": "Donkey Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9590,7 +9590,7 @@
     "displayName": "Drowned Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9599,7 +9599,7 @@
     "displayName": "Elder Guardian Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9608,7 +9608,7 @@
     "displayName": "Ender Dragon Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9617,7 +9617,7 @@
     "displayName": "Enderman Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9626,7 +9626,7 @@
     "displayName": "Endermite Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9635,7 +9635,7 @@
     "displayName": "Evoker Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9644,7 +9644,7 @@
     "displayName": "Fox Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9653,7 +9653,7 @@
     "displayName": "Frog Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9662,7 +9662,7 @@
     "displayName": "Ghast Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9671,7 +9671,7 @@
     "displayName": "Glow Squid Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9680,7 +9680,7 @@
     "displayName": "Goat Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9689,7 +9689,7 @@
     "displayName": "Guardian Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9698,7 +9698,7 @@
     "displayName": "Hoglin Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9707,7 +9707,7 @@
     "displayName": "Horse Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9716,7 +9716,7 @@
     "displayName": "Husk Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9725,7 +9725,7 @@
     "displayName": "Iron Golem Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9734,7 +9734,7 @@
     "displayName": "Llama Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9743,7 +9743,7 @@
     "displayName": "Magma Cube Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9752,7 +9752,7 @@
     "displayName": "Mooshroom Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9761,7 +9761,7 @@
     "displayName": "Mule Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9770,7 +9770,7 @@
     "displayName": "Ocelot Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9779,7 +9779,7 @@
     "displayName": "Panda Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9788,7 +9788,7 @@
     "displayName": "Parrot Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9797,7 +9797,7 @@
     "displayName": "Phantom Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9806,7 +9806,7 @@
     "displayName": "Pig Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9815,7 +9815,7 @@
     "displayName": "Piglin Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9824,7 +9824,7 @@
     "displayName": "Piglin Brute Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9833,7 +9833,7 @@
     "displayName": "Pillager Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9842,7 +9842,7 @@
     "displayName": "Polar Bear Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9851,7 +9851,7 @@
     "displayName": "Pufferfish Spawn Egg",
     "stackSize": 64,
     "category": "Food",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9860,7 +9860,7 @@
     "displayName": "Rabbit Spawn Egg",
     "stackSize": 64,
     "category": "Food",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9869,7 +9869,7 @@
     "displayName": "Ravager Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9878,7 +9878,7 @@
     "displayName": "Salmon Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9887,7 +9887,7 @@
     "displayName": "Sheep Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9896,7 +9896,7 @@
     "displayName": "Shulker Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9905,7 +9905,7 @@
     "displayName": "Silverfish Spawn Egg",
     "stackSize": 64,
     "category": "Food",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9914,7 +9914,7 @@
     "displayName": "Skeleton Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9923,7 +9923,7 @@
     "displayName": "Skeleton Horse Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9932,7 +9932,7 @@
     "displayName": "Slime Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9941,7 +9941,7 @@
     "displayName": "Sniffer Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9950,7 +9950,7 @@
     "displayName": "Snow Golem Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9959,7 +9959,7 @@
     "displayName": "Spider Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9968,7 +9968,7 @@
     "displayName": "Squid Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9977,7 +9977,7 @@
     "displayName": "Stray Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9986,7 +9986,7 @@
     "displayName": "Strider Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -9995,7 +9995,7 @@
     "displayName": "Tadpole Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10004,7 +10004,7 @@
     "displayName": "Trader Llama Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10013,7 +10013,7 @@
     "displayName": "Tropical Fish Spawn Egg",
     "stackSize": 64,
     "category": "Food",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10022,7 +10022,7 @@
     "displayName": "Turtle Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10031,7 +10031,7 @@
     "displayName": "Vex Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10040,7 +10040,7 @@
     "displayName": "Villager Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10049,7 +10049,7 @@
     "displayName": "Vindicator Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10058,7 +10058,7 @@
     "displayName": "Wandering Trader Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10067,7 +10067,7 @@
     "displayName": "Warden Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10076,7 +10076,7 @@
     "displayName": "Witch Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10085,7 +10085,7 @@
     "displayName": "Wither Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10094,7 +10094,7 @@
     "displayName": "Wither Skeleton Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10103,7 +10103,7 @@
     "displayName": "Wolf Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10112,7 +10112,7 @@
     "displayName": "Zoglin Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10121,7 +10121,7 @@
     "displayName": "Creaking Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10130,7 +10130,7 @@
     "displayName": "Zombie Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10139,7 +10139,7 @@
     "displayName": "Zombie Horse Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10148,7 +10148,7 @@
     "displayName": "Zombie Villager Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -10157,7 +10157,7 @@
     "displayName": "Zombified Piglin Spawn Egg",
     "stackSize": 64,
     "category": "Materials & Misc",
-    "texturePath": null,
+    "texturePath": "items/spawn_egg.png",
     "isBlock": false
   },
   {
@@ -12335,7 +12335,7 @@
     "displayName": "Calcite Pillar",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12344,7 +12344,7 @@
     "displayName": "Calcite Slab",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12353,7 +12353,7 @@
     "displayName": "Calcite Stairs",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12362,7 +12362,7 @@
     "displayName": "Calcite Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12371,7 +12371,7 @@
     "displayName": "Polished Calcite",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12380,7 +12380,7 @@
     "displayName": "Polished Calcite Slab",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12389,7 +12389,7 @@
     "displayName": "Polished Calcite Stairs",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12398,7 +12398,7 @@
     "displayName": "Polished Calcite Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12407,7 +12407,7 @@
     "displayName": "Polished Calcite Bricks",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12416,7 +12416,7 @@
     "displayName": "Polished Calcite Brick Slab",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12425,7 +12425,7 @@
     "displayName": "Polished Calcite Brick Stairs",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12434,7 +12434,7 @@
     "displayName": "Polished Calcite Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/calcite.png",
     "isBlock": true
   },
   {
@@ -12443,7 +12443,7 @@
     "displayName": "Snow Bricks",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/snow.png",
     "isBlock": true
   },
   {
@@ -12452,7 +12452,7 @@
     "displayName": "Snow Brick Slab",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/snow.png",
     "isBlock": true
   },
   {
@@ -12461,7 +12461,7 @@
     "displayName": "Snow Brick Stairs",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/snow.png",
     "isBlock": true
   },
   {
@@ -12470,7 +12470,7 @@
     "displayName": "Snow Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/snow.png",
     "isBlock": true
   },
   {
@@ -12479,7 +12479,7 @@
     "displayName": "Packed Ice Bricks",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/packed_ice.png",
     "isBlock": true
   },
   {
@@ -12488,7 +12488,7 @@
     "displayName": "Packed Ice Brick Slab",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/packed_ice.png",
     "isBlock": true
   },
   {
@@ -12497,7 +12497,7 @@
     "displayName": "Packed Ice Brick Stairs",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/packed_ice.png",
     "isBlock": true
   },
   {
@@ -12506,7 +12506,7 @@
     "displayName": "Packed Ice Brick Wall",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/packed_ice.png",
     "isBlock": true
   },
   {
@@ -12515,7 +12515,7 @@
     "displayName": "Chiseled Packed Ice",
     "stackSize": 64,
     "category": "Building",
-    "texturePath": null,
+    "texturePath": "blocks/packed_ice.png",
     "isBlock": true
   },
   {
