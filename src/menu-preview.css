@@ -1,0 +1,40 @@
+/* Animated in-editor Minecraft menu preview. These are preview-only effects. */
+.preview-settings{grid-column:1/-1;padding:14px;background:rgba(10,20,31,.72);border:1px solid #40566d;display:flex;flex-direction:column;gap:11px}
+.preview-settings-title{display:flex;align-items:center;gap:8px;color:#91d9f4;font-size:9px}
+.preview-settings>p{font-size:8px;line-height:1.8;color:#a9bac8;margin:-4px 0 2px}
+.preview-settings .field{margin:0}
+.preview-settings input[type=range]{padding:0;accent-color:#65c4e8}
+.preview-toggle{display:flex;align-items:center;gap:9px;color:#c7d5df;font-size:8px}
+.preview-toggle input{accent-color:#65c4e8}
+.preview-test-button{align-self:flex-start}
+.menu-preview-backdrop{position:fixed;inset:0;z-index:180;display:grid;place-items:center;padding:22px;background:rgba(3,8,14,.76);backdrop-filter:blur(5px);animation:preview-backdrop-in var(--preview-duration,420ms) var(--preview-ease,ease-out) both}
+.menu-preview-dialog{width:min(760px,100%);max-height:calc(100vh - 44px);overflow:auto;border:1px solid #5a7188;background:#152333;box-shadow:0 24px 90px #000b;color:#edf6fc}
+.menu-preview-toolbar,.menu-preview-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 15px;background:#17283a;border-bottom:1px solid #3b536a}
+.menu-preview-toolbar>div{display:flex;align-items:center;gap:8px;font-size:8px;color:#a9dff4}
+.preview-live-dot{width:7px;height:7px;border-radius:50%;background:#72d6a4;box-shadow:0 0 12px #72d6a4}
+.menu-preview-game{padding:clamp(14px,4vw,34px);background:radial-gradient(ellipse at center,#34495b 0,#1b2b3b 58%,#101a27 100%);display:grid;place-items:center;min-height:300px}
+.menu-preview-window{width:min(100%,560px);padding:18px;background:#c6c6c6;color:#404040;border:3px solid;border-color:#fff #555 #555 #fff;box-shadow:inset 2px 2px #eee,inset -2px -2px #777,0 15px 35px #0007;font-family:Arial,sans-serif}
+.menu-preview-title,.menu-preview-inventory-label{font:14px Arial,sans-serif;color:#404040;text-shadow:1px 1px #fff;margin:0 0 12px}
+.menu-preview-slots,.menu-preview-player-slots{display:grid;gap:4px}
+.menu-preview-slot,.menu-preview-player-slots i{position:relative;aspect-ratio:1;min-width:0;background:#8b8b8b;box-shadow:inset 2px 2px #373737,inset -2px -2px #fff;display:grid;place-items:center}
+.menu-preview-slot .material-icon-wrap{width:82%;height:82%;display:grid;place-items:center}
+.menu-preview-slot .material-icon-wrap img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated}
+.menu-preview-slot .item-glyph{font-size:clamp(13px,2.5vw,24px)}
+.menu-preview-count{position:absolute;right:3px;bottom:1px;color:#fff;font:700 11px Arial;text-shadow:1px 1px #333}
+.menu-preview-inventory-label{margin:18px 0 9px}
+.menu-preview-player-slots{grid-template-columns:repeat(9,minmax(0,1fr));margin-bottom:11px}
+.menu-preview-player-slots.hotbar{margin:0}
+.menu-preview-footer{border-top:1px solid #3b536a;border-bottom:0;color:#a9bac8;font-size:8px}
+.preview-fade{animation:preview-fade-in var(--preview-duration,420ms) var(--preview-ease,ease-out) both}
+.preview-chest{animation:preview-chest-in var(--preview-duration,420ms) var(--preview-ease,ease-out) both;transform-origin:50% 30%}
+.preview-pop .menu-preview-window{animation:preview-fade-in var(--preview-duration,420ms) var(--preview-ease,ease-out) both}
+.preview-pop .menu-preview-slot.has-preview-item{animation:preview-slot-pop 300ms var(--preview-ease,ease-out) both}.preview-pop.stagger-enabled .menu-preview-slot.has-preview-item{animation-delay:calc(var(--slot-index,0) * 13ms)}
+.preview-chest .menu-preview-slot.has-preview-item{animation:preview-slot-pop 260ms var(--preview-ease,ease-out) both}.preview-chest.stagger-enabled .menu-preview-slot.has-preview-item{animation-delay:calc(var(--slot-index,0) * 7ms)}
+.menu-preview-backdrop.is-closing{animation-direction:reverse}
+.menu-preview-backdrop.is-closing .menu-preview-dialog,.menu-preview-backdrop.is-closing .menu-preview-window{animation-direction:reverse}
+@keyframes preview-backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes preview-fade-in{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+@keyframes preview-chest-in{0%{opacity:0;transform:translateY(34px) scale(.91)}65%{opacity:1;transform:translateY(-5px) scale(1.015)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes preview-slot-pop{0%{opacity:0;transform:scale(.35) translateY(8px);filter:brightness(1.8)}75%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1);filter:brightness(1)}}
+@media(prefers-reduced-motion:reduce){.menu-preview-backdrop,.menu-preview-dialog,.menu-preview-window,.menu-preview-slot.has-preview-item{animation:none!important;transition:none!important}}
+@media(max-width:600px){.menu-preview-window{padding:10px}.menu-preview-slots,.menu-preview-player-slots{gap:2px}.menu-preview-game{padding:10px;min-height:220px}.menu-preview-toolbar,.menu-preview-footer{padding:9px}.menu-preview-footer{font-size:7px}}
