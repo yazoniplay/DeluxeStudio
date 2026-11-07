@@ -5,7 +5,9 @@ A browser-based visual editor for [DeluxeMenus](https://www.spigotmc.org/resourc
 ## Features
 
 - Chest-style inventory canvas with 9–54 slots, item selection, drag-to-move, and multi-slot items.
-- Authentic Minecraft item textures for supported standard materials (Minecraft 1.21.4 asset set), with a fallback glyph when a texture is unavailable.
+- Searchable, categorized Minecraft 1.21.4 material catalogue with 1,370 non-combat entries, category filtering, and incremental loading.
+- Real Minecraft 1.21.4 item/block texture mappings for 835 catalogue entries; unavailable textures use a fallback glyph.
+- Custom in-game item names with Minecraft color-code support and a one-click reset to the vanilla display name.
 - Item editor for material, slot(s), display name, lore, amounts, damage, model data, item models, enchantments, item flags, and update settings.
 - Click actions for any, left, right, shift-left, shift-right, and legacy middle-click interactions.
 - YAML editors for item requirements, menu open requirements, and complete raw item/menu configuration.
