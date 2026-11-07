@@ -24,6 +24,7 @@ export default function App(){
  const selectedMaterialMeta=selected?ITEM_BY_NAME[String(selected.material||'').toUpperCase()]:null
  useEffect(()=>{localStorage.setItem('deluxestudio-project',yaml)},[yaml])
  useEffect(()=>{setRawMenuText(yaml)},[yaml])
+ useEffect(()=>{setTutorialStep(0);setShowTutorial(true)},[])
  const notify=msg=>{setToast(msg);window.clearTimeout(notify.timer);notify.timer=window.setTimeout(()=>setToast(''),2200)}
  const updateConfig=patch=>setConfig(p=>({...p,...patch}))
  const updateItem=patch=>{if(!selectedKey)return;setConfig(p=>({...p,items:{...p.items,[selectedKey]:{...p.items[selectedKey],...patch}}}))}
@@ -43,7 +44,7 @@ export default function App(){
  const sizeChange=size=>setConfig(p=>({...p,size,items:Object.fromEntries(Object.entries(p.items).filter(([,item])=>Number(item.slot)<size).map(([key,item])=>[key,{...item,slots:(item.slots||[]).filter(slot=>Number(slot)<size)}]))}))
  return <div className="app-shell">
   
-  <main className="main"><header className="topbar"><div className="crumb"><span>Workspace</span><b>/</b><strong>Menu editor</strong></div><div className="top-actions"><button className="btn btn-quiet" onClick={newMenu}>New</button><button className="btn btn-quiet" onClick={()=>setMobilePanel(v=>v==='yaml'?'canvas':'yaml')}>YAML</button><span className="save-state"><span/> Auto-saved</span><button className="btn btn-quiet" onClick={()=>fileInput.current?.click()}><Upload size={15}/> Import</button><button className="btn btn-primary" onClick={download}><Download size={15}/> Export YAML</button><input ref={fileInput} type="file" accept=".yml,.yaml,text/yaml" hidden onChange={e=>importFile(e.target.files?.[0])}/></div></header>
+  <main className="main"><header className="topbar"><div className="crumb"><span>Workspace</span><b>/</b><strong>Menu editor</strong></div><div className="top-actions"><button className="btn btn-quiet" onClick={newMenu}>New</button><button className="btn btn-quiet" onClick={()=>{setTutorialStep(0);setShowTutorial(true)}}>Tutorial</button><button className="btn btn-quiet" onClick={()=>setMobilePanel(v=>v==='yaml'?'canvas':'yaml')}>YAML</button><span className="save-state"><span/> Auto-saved</span><button className="btn btn-quiet" onClick={()=>fileInput.current?.click()}><Upload size={15}/> Import</button><button className="btn btn-primary" onClick={download}><Download size={15}/> Export YAML</button><input ref={fileInput} type="file" accept=".yml,.yaml,text/yaml" hidden onChange={e=>importFile(e.target.files?.[0])}/></div></header>
    <section className="page-heading"><div><h1>DeluxeStudio</h1><p>Build a Minecraft menu. Export clean DeluxeMenus YAML.</p></div><div className="heading-meta"><span>{Object.keys(config.items).length} items</span><span>{config.size} chest slots</span></div></section>
    <div className="mobile-tabs"><button className={mobilePanel==='canvas'?'selected':''} onClick={()=>setMobilePanel('canvas')}>GUI</button><button className={mobilePanel==='blocks'?'selected':''} onClick={()=>setMobilePanel('blocks')}>Blocks</button><button className={mobilePanel==='inspector'?'selected':''} onClick={()=>setMobilePanel('inspector')}>Properties</button><button className={mobilePanel==='yaml'?'selected':''} onClick={()=>setMobilePanel('yaml')}>YAML</button></div>
    <div className="workspace-grid">
