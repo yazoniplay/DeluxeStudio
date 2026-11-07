@@ -23,7 +23,7 @@
 /* Minecraft-inspired pixel interface */
 :root{font-family:'Silkscreen',monospace;color:#e8edf4;background:#0c121c;--bg:#0c121c;--panel:rgba(18,27,40,.94);--line:#35465a;--muted:#9aabba;--text:#edf4fa;--accent:#5bb8df;--mono:'Silkscreen',monospace}
 *{font-family:'Silkscreen',monospace!important;letter-spacing:0!important}
-body{background-color:#0b111b;background-image:linear-gradient(180deg,rgba(7,12,20,.72),rgba(7,12,20,.84)),url("https://whatifgaming.com/wp-content/uploads/2024/02/Minecraft-Plains-Seeds-3-1024x534.png");background-position:center,center 46%;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;image-rendering:pixelated}
+body{background-color:#0b111b;background-image:linear-gradient(180deg,rgba(7,12,20,.28),rgba(7,12,20,.52)),url("https://upload.wikimedia.org/wikipedia/commons/9/9a/Minecraft_-_1.18_mountains.jpg");background-position:center,center 46%;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;image-rendering:pixelated}
 body:before{content:none;display:none}
 .app-shell{position:relative;z-index:1}
 .topbar{background:rgba(12,18,28,.92);border-color:#3b4d61}
