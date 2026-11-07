@@ -69,7 +69,10 @@ export function parseYAML(source) {
     if (!value || typeof value !== 'object') continue
     const slot = Number(value.slot)
     if (!Number.isInteger(slot) || slot < 0 || slot >= Number(parsed.size || 54)) continue
-    items[key] = { ...value, slot, material: value.material || 'STONE' }
+    const item = { ...value, slot, material: value.material || 'STONE' }
+    if (item.model_data == null && item.custom_model_data != null) item.model_data = item.custom_model_data
+    delete item.custom_model_data
+    items[key] = item
   }
   return {
     ...createDefaultConfig(),
@@ -92,9 +95,32 @@ export function validateConfig(config) {
     if (!Number.isInteger(slot) || slot < 0 || slot >= Number(config.size)) {
       errors.push(`${key}: slot must be between 0 and ${Number(config.size) - 1}.`)
     }
-    if (occupied.has(slot)) warnings.push(`Slots ${slot} is shared by "${occupied.get(slot)}" and "${key}". Check priorities if this is intentional.`)
+    if (occupied.has(slot)) warnings.push(`Slot ${slot} is shared by "${occupied.get(slot)}" and "${key}". Check priorities if this is intentional.`)
     else occupied.set(slot, key)
     if (item.slot == null) errors.push(`${key}: slot is required.`)
+    for (const actionField of ['click_commands','left_click_commands','right_click_commands','shift_left_click_commands','shift_right_click_commands','middle_click_commands']) {
+      for (const [index, action] of (item[actionField] || []).entries()) {
+        if (typeof action === 'string' && action.trim() && !/^\[[a-z_]+\]/i.test(action.trim())) {
+          warnings.push(`${key}: ${actionField} line ${index + 1} should start with a DeluxeMenus action tag, e.g. [message].`)
+        }
+      }
+    }
+    const requirementPairs = [
+      ['click_requirement', 'click_commands'],
+      ['left_click_requirement', 'left_click_commands'],
+      ['right_click_requirement', 'right_click_commands'],
+      ['shift_left_click_requirement', 'shift_left_click_commands'],
+      ['shift_right_click_requirement', 'shift_right_click_commands'],
+      ['middle_click_requirement', 'middle_click_commands'],
+    ]
+    for (const [requirement, commands] of requirementPairs) {
+      if (item[requirement] && !(item[commands] || []).length) {
+        warnings.push(`${key}: ${requirement} needs its matching ${commands} to execute.`)
+      }
+    }
+    if (item.update === true && !Number(config.update_interval)) {
+      warnings.push(`${key}: update is enabled but the menu update_interval is 0.`)
+    }
   }
   return { errors, warnings }
 }
