@@ -103,11 +103,18 @@ export function validateConfig(config) {
   if (!String(config.menu_title || '').trim()) errors.push('Menu title is required.')
   if (!String(config.open_command || '').trim()) warnings.push('No open command is set.')
   if (![9, 18, 27, 36, 45, 54].includes(Number(config.size))) errors.push('Menu size must be 9, 18, 27, 36, 45 or 54.')
+  const chestLayout = !config.inventory_type || config.inventory_type === 'CHEST'
+  if (!chestLayout) warnings.push('Native slot validation is limited to CHEST inventories; the canvas remains a chest-style preview.')
+  for (const [field, actions] of [['open_commands', config.open_commands], ['close_commands', config.close_commands]]) {
+    for (const [index, action] of (actions || []).entries()) {
+      if (typeof action === 'string' && action.trim() && !/^\\[[a-z_]+\\]/i.test(action.trim())) warnings.push(`${field} line ${index + 1} should start with a DeluxeMenus action tag.`)
+    }
+  }
   const occupied = new Map()
   for (const [key, item] of Object.entries(config.items || {})) {
     const slots = [...new Set([Number(item.slot), ...(Array.isArray(item.slots) ? item.slots.map(Number) : [])])]
     if (!item.material) errors.push(`${key}: material is missing.`)
-    if (!slots.length || slots.some(slot => !Number.isInteger(slot) || slot < 0 || slot >= Number(config.size))) {
+    if (!slots.length || slots.some(slot => !Number.isInteger(slot) || slot < 0 || (chestLayout && slot >= Number(config.size)))) {
       errors.push(`${key}: slot values must be between 0 and ${Number(config.size) - 1}.`)
     }
     for (const slot of slots) {
