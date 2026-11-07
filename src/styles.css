@@ -263,3 +263,31 @@ body:before{content:none;display:none}
  .guided-tutorial{right:10px;bottom:10px;width:min(390px,calc(100vw - 20px))}
 }
 @media(prefers-reduced-motion:reduce){.panel,.guided-tutorial,.inventory-slot.has-item{animation:none!important}.inventory-slot,.material-list button,.btn,.icon-btn{transition:none!important}}
+
+
+/* V2 interaction, typography and resilient texture rendering */
+:root{--ui-font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--code-font:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}
+body,button,input,select,textarea{font-family:var(--ui-font)!important;letter-spacing:0!important}
+.minecraft-window,.menu-preview-window{font-family:Arial,sans-serif!important}
+.minecraft-text,.item-glyph,.stack-count,.menu-preview-title,.menu-preview-inventory-label{font-family:'Silkscreen',monospace!important}
+.field-label,.code-file,.file-type,.yaml-status,.yaml-code,.material-option-name small,.material-count,.guide-step-count,.guided-tutorial .tutorial-eyebrow{font-family:var(--code-font)!important;font-variant-ligatures:none;font-feature-settings:"tnum" 1}
+.page-heading h1,.panel-title,.field-label,.code-file,.validation-title{letter-spacing:-.015em!important}
+.field input,.field textarea,.field select,.search-box input,.material-category-select,.yaml-code{font-variant-ligatures:none;font-feature-settings:"tnum" 1}
+.inventory-slot{border:1px solid transparent;transition:transform 120ms cubic-bezier(.2,.8,.2,1),filter 120ms ease,box-shadow 140ms ease,border-color 140ms ease;will-change:transform}
+.inventory-slot:hover{filter:brightness(1.16);border-color:#b9eaff;transform:translateY(-1px);z-index:3}
+.inventory-slot:active{transform:scale(.94);filter:brightness(1.24)}
+.inventory-slot.is-selected{border-color:#b8eaff;outline:1px solid #74c8e9;outline-offset:2px;box-shadow:inset 2px 2px #373737,inset -2px -2px #fff,0 0 0 3px #4b9dc5,0 0 18px #5bb8df35;transform:translateY(-1px);z-index:4}
+.inventory-slot:focus-visible,.material-list button:focus-visible,.quick-materials button:focus-visible{outline:2px solid #9be6ff;outline-offset:3px;z-index:5}
+.material-list button,.quick-materials button,.load-more-materials,.btn,.icon-btn{transition:transform 120ms cubic-bezier(.2,.8,.2,1),background-color 140ms ease,border-color 140ms ease,box-shadow 140ms ease,color 140ms ease}
+.material-list button:hover,.quick-materials button:hover{transform:translateY(-1px);box-shadow:0 4px 12px #0004}
+.material-list button:active,.quick-materials button:active,.btn:active,.icon-btn:active{transform:scale(.97)}
+.material-list button[draggable="true"]:active{cursor:grabbing}
+.material-icon-wrap{position:relative;isolation:isolate;overflow:hidden;display:inline-grid;place-items:center;flex-shrink:0;background:linear-gradient(145deg,#31465a,#1a2939);border:1px solid #526b80;box-shadow:inset 0 1px #ffffff18,0 2px 4px #0005}
+.material-icon-wrap:before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(135deg,#ffffff08 0 3px,transparent 3px 7px);pointer-events:none}
+.material-icon-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:5%;z-index:2;opacity:0;transition:opacity 130ms ease;image-rendering:pixelated}
+.material-icon-wrap.image-loaded img{opacity:1}
+.material-icon-wrap .item-glyph{position:relative;z-index:1;display:grid;place-items:center;width:100%;height:100%;min-width:0;min-height:0;font-family:'Silkscreen',monospace!important;font-size:clamp(10px,1.5vw,20px);line-height:1;text-shadow:0 2px 2px #0009,0 0 8px #0005}
+.material-icon-wrap.image-loaded .item-glyph{opacity:0;transition:opacity 100ms ease}
+.material-icon-wrap.image-fallback .item-glyph{opacity:1}
+.material-icon-wrap .item-glyph:after{content:attr(data-mark);position:absolute;inset:auto 1px 1px auto;font:6px/1 var(--code-font);color:#ffffff88;text-shadow:none;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.inventory-slot,.material-list button,.quick-materials button,.btn,.icon-btn,.material-icon-wrap img{transition:none!important;will-change:auto}}
