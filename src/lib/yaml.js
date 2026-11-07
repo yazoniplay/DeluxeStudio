@@ -102,9 +102,10 @@ export function validateConfig(config) {
   const warnings = []
   if (!String(config.menu_title || '').trim()) errors.push('Menu title is required.')
   if (!String(config.open_command || '').trim()) warnings.push('No open command is set.')
-  if (![9, 18, 27, 36, 45, 54].includes(Number(config.size))) errors.push('Menu size must be 9, 18, 27, 36, 45 or 54.')
-  const chestLayout = !config.inventory_type || config.inventory_type === 'CHEST'
-  if (!chestLayout) warnings.push('Native slot validation is limited to CHEST inventories; the canvas remains a chest-style preview.')
+  const inventoryType = String(config.inventory_type || 'CHEST').toUpperCase()
+  const nativeSlotCounts = { HOPPER: 5, ANVIL: 3, BEACON: 1, BLAST_FURNACE: 3, BREWING: 5, CARTOGRAPHY: 3, DISPENSER: 9, DROPPER: 9, ENCHANTING: 2, ENDER_CHEST: 27, FURNACE: 3, GRINDSTONE: 3, LOOM: 4, PLAYER: 36, BARREL: 27, SHULKER_BOX: 27, SMOKER: 3, WORKBENCH: 10 }
+  const inventorySlotCount = inventoryType === 'CHEST' ? Number(config.size) : (nativeSlotCounts[inventoryType] || 54)
+  if (inventoryType === 'CHEST' && ![9, 18, 27, 36, 45, 54].includes(Number(config.size))) errors.push('Menu size must be 9, 18, 27, 36, 45 or 54.')
   for (const [field, actions] of [['open_commands', config.open_commands], ['close_commands', config.close_commands]]) {
     for (const [index, action] of (actions || []).entries()) {
       if (typeof action === 'string' && action.trim() && !/^\\[[a-z_]+\\]/i.test(action.trim())) warnings.push(`${field} line ${index + 1} should start with a DeluxeMenus action tag.`)
@@ -114,8 +115,8 @@ export function validateConfig(config) {
   for (const [key, item] of Object.entries(config.items || {})) {
     const slots = [...new Set([Number(item.slot), ...(Array.isArray(item.slots) ? item.slots.map(Number) : [])])]
     if (!item.material) errors.push(`${key}: material is missing.`)
-    if (!slots.length || slots.some(slot => !Number.isInteger(slot) || slot < 0 || (chestLayout && slot >= Number(config.size)))) {
-      errors.push(`${key}: slot values must be between 0 and ${Number(config.size) - 1}.`)
+    if (!slots.length || slots.some(slot => !Number.isInteger(slot) || slot < 0 || slot >= inventorySlotCount)) {
+      errors.push(`${key}: slot values must be between 0 and ${inventorySlotCount - 1} for ${inventoryType} inventories.`)
     }
     for (const slot of slots) {
       if (occupied.has(slot)) warnings.push(`Slot ${slot} is shared by "${occupied.get(slot)}" and "${key}". Check priorities if this is intentional.`)
