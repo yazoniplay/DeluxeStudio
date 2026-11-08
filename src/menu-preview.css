@@ -104,7 +104,7 @@
 /* In-game Minecraft preview: world, vanilla container GUI, HUD and chat. */
 .minecraft-preview-dialog{width:min(1180px,96vw);max-height:94vh;overflow:hidden;background:#15191e;border:1px solid #39424c;box-shadow:0 28px 100px #000c}
 .minecraft-preview-dialog .menu-preview-toolbar{background:#111820;border-color:#303b45;min-height:42px}
-.minecraft-game-screen{height:min(690px,76vh);min-height:470px;position:relative;isolation:isolate;overflow:hidden;background:#7eaa55 url('./flat-world.svg') center 56%/cover no-repeat;font-family:Arial,sans-serif;image-rendering:pixelated}
+.minecraft-game-screen{height:min(690px,76vh);min-height:470px;position:relative;isolation:isolate;overflow:hidden;background:#7eaa55 url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/ab/Default_Superflat_world.png/revision/latest?cb=20240319211754') center 52%/cover no-repeat;font-family:Arial,sans-serif;image-rendering:pixelated}
 .minecraft-world-dim{position:absolute;inset:0;background:rgba(0,0,0,.43);pointer-events:none}
 .minecraft-top-hud{position:absolute;top:12px;left:15px;right:15px;display:flex;justify-content:space-between;color:#fff;font:12px/1.2 ui-monospace,monospace;text-shadow:2px 2px #333;opacity:.85}
 .minecraft-crosshair{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#fff;font:20px/1 monospace;text-shadow:1px 1px #333;opacity:.75}
@@ -150,3 +150,8 @@
  .minecraft-top-hud{font-size:9px;left:8px;right:8px}
 }
 @media(prefers-reduced-motion:reduce){.minecraft-menu-slot{transition:none}}
+
+/* Real Minecraft Superflat screenshot backdrop; keep the world visible after the GUI closes. */
+.minecraft-game-screen{background-image:url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/ab/Default_Superflat_world.png/revision/latest?cb=20240319211754');background-position:center 52%;background-size:cover}
+.minecraft-reopen-hint{position:absolute;z-index:2;left:50%;top:43%;transform:translate(-50%,-50%);padding:10px 14px;background:rgba(0,0,0,.48);color:#fff;font:13px Arial,sans-serif;text-shadow:1px 1px #222;white-space:nowrap}
+.minecraft-reopen-hint kbd{display:inline-block;margin:0 3px;padding:2px 7px;background:#ddd;color:#222;border:1px solid #fff;box-shadow:inset 0 -2px #888;font:700 12px Arial,sans-serif}
