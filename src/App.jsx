@@ -32,7 +32,7 @@ const getPreviewActions = (item, clickType) => {
  return [...(item.click_commands||[]), ...(field ? item[field]||[] : [])].filter(Boolean).map(String)
 }
 const describePreviewAction = raw => {
- const match=String(raw).trim().match(/^\\[([^\\]]+)\\]\\s*(.*)$/)
+ const match=String(raw).trim().match(/^\[([^\]]+)\]\s*(.*)$/)
  if(!match)return {kind:'Action',detail:String(raw).trim(),raw}
  const type=match[1].toLowerCase(),value=match[2].trim()
  if(type==='message'||type==='broadcast')return {kind:type==='message'?'Player message':'Broadcast',message:value,raw}
