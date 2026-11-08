@@ -2,6 +2,8 @@
 
 A browser-based visual editor for [DeluxeMenus](https://www.spigotmc.org/resources/deluxemenus.11734/) configurations.
 
+**[Open the live editor](https://yazoniplay.github.io/DeluxeStudio/)** — runs entirely in your browser, nothing is uploaded.
+
 ## Features
 
 - Chest-style inventory canvas with 9–54 slots, item selection, drag-to-move, and multi-slot items.
