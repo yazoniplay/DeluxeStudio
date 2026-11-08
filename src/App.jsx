@@ -54,7 +54,7 @@ const buildPreviewChat = (item, clickType) => {
  actions.forEach(raw=>{
   const action=describePreviewAction(raw)
   if(action.message!==undefined) lines.push({kind:'message',text:action.message})
-  else if(action.command) lines.push({kind:'command',text:action.executor==='The player'?'§7[Player] §fWould run: §e/'+action.command.replace(/^\\//,''):'§d[Console] §fWould execute: §e'+action.command})
+  else if(action.command) lines.push({kind:'command',text:action.executor==='The player'?'§7[Player] §fWould run: §e/'+(action.command.startsWith('/')?action.command.slice(1):action.command):'§d[Console] §fWould execute: §e'+action.command})
   else if(action.kind==='Open menu') lines.push({kind:'system',text:'§e[Menu] §fWould open menu: §b'+(action.detail||'')})
   else if(action.kind==='Close menu') lines.push({kind:'system',text:'§e[Menu] §fWould close this inventory.'})
   else if(action.kind==='Play sound') lines.push({kind:'system',text:'§7[Preview] §fWould play sound: §b'+action.detail})
